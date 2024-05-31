@@ -10,6 +10,7 @@ public static class CourseFactory
         return new CourseEntity
         {
             Category = request.Category,
+            Description = request.Description,
             isBestseller = request.isBestseller,
             SmallImageUri = request.SmallImageUri,
             Title = request.Title,
@@ -38,6 +39,7 @@ public static class CourseFactory
             isBestseller = request.isBestseller,
             SmallImageUri = request.SmallImageUri,
             Title = request.Title,
+            Description = request.Description,
             Authors = request.Authors?.Select(a => new AuthorEntity
             {
                 Name = a.Name,
@@ -63,6 +65,7 @@ public static class CourseFactory
             isBestseller = entity.isBestseller,
             SmallImageUri = entity.SmallImageUri,
             Title = entity.Title,
+            Description = entity.Description,
             Authors = entity.Authors?.Select(a => new Author
             {
                 Name = a.Name,

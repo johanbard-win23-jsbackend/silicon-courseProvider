@@ -12,6 +12,7 @@ public class CourseType : ObjectType<CourseEntity>
         descriptor.Field(c => c.isBestseller).Type<BooleanType>();
         descriptor.Field(c => c.SmallImageUri).Type<StringType>();
         descriptor.Field(c => c.Title).Type<StringType>();
+        descriptor.Field(c => c.Description).Type<StringType>();
         descriptor.Field(c => c.Hours).Type<StringType>();
         descriptor.Field(c => c.Likes).Type<StringType>();
         descriptor.Field(c => c.LikesInPercent).Type<StringType>();

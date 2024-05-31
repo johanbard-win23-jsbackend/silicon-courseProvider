@@ -101,7 +101,7 @@ public class CourseService(IDbContextFactory<DataContext> contextFactory) : ICou
         await using var context = _contextFactory.CreateDbContext();
 
         var existingEntity = await context.Courses.FirstOrDefaultAsync(x => x.Id == cuReq.Id);
-        if (existingEntity != null) { return null!; }
+        if (existingEntity == null) { return null!; }
 
         var updatedEntity = CourseFactory.CreateCourseEntity(cuReq);
 
